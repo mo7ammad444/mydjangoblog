@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>article</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<h1>list</h1>
+{% for list in articles %}
+    <h1><a href="#">{{ list.title }}</a></h1>
+    <p>{{ list.slug }}</p>
+    <p>{{ list.snipped }}</p>
+    <p>{{ list.date }}</p>
+{% endfor %}
+</body>
+</html>
